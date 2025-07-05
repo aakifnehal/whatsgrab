@@ -15,17 +15,17 @@ export default function Home() {
               <span className="text-xl font-bold text-gray-900">WhatsGrapp</span>
             </div>
             <nav className="hidden md:flex space-x-8">
-              <Link href="/products" className="text-gray-600 hover:text-gray-900">Shop</Link>
+              <Link href="/products" className="text-gray-600 hover:text-gray-900">Products</Link>
+              <Link href="/database-monitor" className="text-gray-600 hover:text-gray-900">Database</Link>
               <Link href="#features" className="text-gray-600 hover:text-gray-900">Features</Link>
-              <Link href="#pricing" className="text-gray-600 hover:text-gray-900">Pricing</Link>
-              <Link href="/dashboard" className="text-gray-600 hover:text-gray-900">Dashboard</Link>
+              <Link href="/merchant/onboard" className="text-gray-600 hover:text-gray-900">Register</Link>
             </nav>
             <div className="flex space-x-4">
-              <Link href="/signup">
-                <Button variant="outline">Sign Up</Button>
+              <Link href="/products">
+                <Button variant="outline">Browse Products</Button>
               </Link>
-              <Link href="/dashboard">
-                <Button>Get Started</Button>
+              <Link href="/merchant/onboard">
+                <Button>Try Chatbot</Button>
               </Link>
             </div>
           </div>
@@ -40,18 +40,18 @@ export default function Home() {
             <span className="text-green-600"> WhatsApp</span>
           </h1>
           <p className="mt-6 text-xl leading-8 text-gray-600 max-w-3xl mx-auto">
-            Transform your business with AI-powered WhatsApp commerce. 
-            Onboard merchants, manage products, process payments, and engage customers - all through WhatsApp.
+            Experience the future of e-commerce setup through natural language conversations. 
+            Our AI chatbot handles everything from business registration to product management - just by chatting!
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link href="/merchant/onboard">
               <Button size="lg" className="px-8 py-4 text-lg">
-                🚀 Start Free Trial
+                🤖 Try AI Chatbot
               </Button>
             </Link>
-            <Link href="#demo">
+            <Link href="/products">
               <Button size="lg" variant="outline" className="px-8 py-4 text-lg">
-                📱 See Demo
+                �️ View Products
               </Button>
             </Link>
           </div>
@@ -60,8 +60,8 @@ export default function Home() {
         {/* Features Grid */}
         <div id="features" className="mt-32">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-gray-900">Everything you need</h2>
-            <p className="mt-4 text-lg text-gray-600">Powerful tools to grow your WhatsApp business</p>
+            <h2 className="text-3xl font-bold text-gray-900">Actually Implemented Features</h2>
+            <p className="mt-4 text-lg text-gray-600">Real features you can use right now</p>
           </div>
           
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -69,8 +69,8 @@ export default function Home() {
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🏪</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Merchant Onboarding</h3>
-              <p className="text-gray-600">Quick and easy merchant registration with automated verification and setup.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Merchant Registration</h3>
+              <p className="text-gray-600">Quick business registration via WhatsApp chat or web forms with database storage.</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
@@ -78,39 +78,39 @@ export default function Home() {
                 <span className="text-2xl">📦</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Product Management</h3>
-              <p className="text-gray-600">Add, edit, and organize your products with rich media and descriptions.</p>
+              <p className="text-gray-600">Add products via chat or web interface with instant checkout link generation.</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">💳</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Payment Links</h3>
-              <p className="text-gray-600">Generate secure payment links for seamless WhatsApp transactions.</p>
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">📊</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Analytics</h3>
-              <p className="text-gray-600">Real-time insights into sales, customer behavior, and business growth.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Checkout Pages</h3>
+              <p className="text-gray-600">Auto-generated product checkout pages with customer information collection.</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-2xl">🤖</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Assistant</h3>
-              <p className="text-gray-600">Smart chatbot to handle customer inquiries and automate responses.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">AI Chatbot</h3>
+              <p className="text-gray-600">Gemini AI-powered WhatsApp-style chatbot with natural language processing.</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">📊</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Database Monitor</h3>
+              <p className="text-gray-600">Real-time dashboard showing all saved messages, merchants, and products.</p>
             </div>
 
             <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">🛒</span>
+                <span className="text-2xl">�️</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">WhatsApp Commerce</h3>
-              <p className="text-gray-600">Complete shopping experience directly within WhatsApp conversations.</p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Product Catalog</h3>
+              <p className="text-gray-600">Browse all products from all merchants with search and filtering capabilities.</p>
             </div>
           </div>
         </div>
@@ -122,21 +122,21 @@ export default function Home() {
               <span className="text-4xl">🛍️</span>
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Discover Amazing Products
+              Live Product Marketplace
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Browse through hundreds of products from verified merchants. From electronics to fashion, 
-              find everything you need with secure WhatsApp checkout.
+              Browse real products from registered merchants. All products are added via our AI chatbot 
+              and have working checkout pages with customer data collection.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/products">
                 <Button size="lg" className="px-8 py-4 text-lg bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700">
-                  🛒 Browse All Products
+                  🛒 Browse Products
                 </Button>
               </Link>
-              <Link href="/merchant/onboard">
+              <Link href="/database-monitor">
                 <Button size="lg" variant="outline" className="px-8 py-4 text-lg border-2">
-                  🏪 Become a Seller
+                  📊 View Database
                 </Button>
               </Link>
             </div>
@@ -152,55 +152,86 @@ export default function Home() {
               </svg>
             </div>
             <h3 className="text-2xl font-bold text-green-800 mb-2">
-              💬 Try Our WhatsApp Chatbot!
+              💬 Try Our AI-Powered WhatsApp Chatbot!
             </h3>
             <p className="text-green-700 text-lg mb-4">
-              Experience all WhatsGrapp features right here! Click the WhatsApp icon in the bottom-right corner.
+              Test all features right here! Our Gemini AI chatbot handles business registration, 
+              product management, and checkout generation using natural language.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-green-600">
               <div className="flex items-center justify-center space-x-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                <span>Business Registration</span>
+                <span>AI Business Setup</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                <span>Product Management</span>
+                <span>Smart Product Addition</span>
               </div>
               <div className="flex items-center justify-center space-x-2">
                 <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                <span>Payment Links</span>
+                <span>Instant Checkout Links</span>
               </div>
-            </div>              <div className="mt-4 text-xs text-green-600 bg-green-100 rounded-lg p-3">
-                <strong>Try these commands:</strong> &quot;hello&quot; • &quot;start onboarding&quot; • &quot;add product&quot; • &quot;generate link&quot; • &quot;analytics&quot;
-              </div>
+            </div>
+            <div className="mt-4 text-xs text-green-600 bg-green-100 rounded-lg p-3">
+              <strong>Try these commands:</strong> &quot;hello&quot; • &quot;Tech Store, +65 1234, Electronics&quot; • &quot;iPhone 15, 1200, Latest phone&quot; • &quot;show products&quot;
+            </div>
           </div>
         </div>
 
         {/* CTA Section */}
         <div className="mt-32 bg-green-600 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to get started?</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to experience the future?</h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses already using WhatsGrapp to grow their sales through WhatsApp.
+            Start building your business using natural language. No complex forms, just chat!
           </p>
           <Link href="/merchant/onboard">
             <Button size="lg" variant="secondary" className="px-8 py-4 text-lg">
-              Start Your Free Trial
+              Start Chatting Now
             </Button>
           </Link>
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 mt-32">
+      {/* Footer with Special Copy */}
+      <footer className="bg-gray-900 text-white py-16 mt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-4">
+            <div className="flex items-center justify-center space-x-2 mb-6">
               <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">W</span>
               </div>
               <span className="text-xl font-bold">WhatsGrapp</span>
             </div>
-            <p className="text-gray-400">Empowering businesses through WhatsApp commerce</p>
+            
+            {/* Special Copy Section */}
+            <div className="bg-gray-800 rounded-xl p-8 mb-8 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-green-400 mb-4">
+                🚀 Your Go-To Solution for End-to-End Payment Solutions Using Natural Language
+              </h3>
+              <p className="text-lg text-gray-300 leading-relaxed">
+                WhatsGrapp revolutionizes e-commerce by enabling businesses to set up complete payment workflows 
+                through simple conversations. From merchant registration to product management and checkout generation - 
+                everything happens through natural language interactions with our AI-powered WhatsApp-style interface.
+              </p>
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div className="bg-gray-700 rounded-lg p-4">
+                  <div className="text-green-400 font-semibold mb-2">🗣️ Natural Language Setup</div>
+                  <div className="text-gray-300">Just chat to register your business and add products</div>
+                </div>
+                <div className="bg-gray-700 rounded-lg p-4">
+                  <div className="text-blue-400 font-semibold mb-2">⚡ Instant Implementation</div>
+                  <div className="text-gray-300">Checkout pages and payment links generated automatically</div>
+                </div>
+                <div className="bg-gray-700 rounded-lg p-4">
+                  <div className="text-purple-400 font-semibold mb-2">🤖 AI-Powered Intelligence</div>
+                  <div className="text-gray-300">Gemini AI understands your business needs and acts accordingly</div>
+                </div>
+              </div>
+            </div>
+            
+            <p className="text-gray-400 text-sm">
+              &copy; 2025 WhatsGrapp. The future of conversational commerce is here.
+            </p>
           </div>
         </div>
       </footer>

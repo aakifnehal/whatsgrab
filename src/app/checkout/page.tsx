@@ -314,10 +314,43 @@ export default function CheckoutPage() {
                   className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
                   <option value="card">Credit/Debit Card</option>
-                  <option value="paypal">PayPal</option>
                   <option value="bank">Bank Transfer</option>
                   <option value="cash">Cash on Delivery</option>
+                  <option value="grabpay">GrabPay</option>
                 </select>
+              </div>
+
+              {/* Grab Loan Products Button */}
+              <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-4 border border-green-200 mb-4">
+                <div className="flex items-start justify-between">
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <span className="text-lg">💰</span>
+                      <h3 className="text-sm font-semibold text-gray-900">Need financing options?</h3>
+                    </div>
+                    <p className="text-xs text-gray-600 mb-2">
+                      Explore flexible loan products from Grab Financial Services
+                    </p>
+                    <ul className="text-xs text-gray-500 space-y-1">
+                      <li>• Personal loans up to $30,000</li>
+                      <li>• Quick approval in minutes</li>
+                      <li>• Competitive interest rates</li>
+                    </ul>
+                  </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => window.open('https://www.grab.com/sg/financial-services/loans/', '_blank')}
+                    className="bg-green-600 text-white hover:bg-green-700 border-green-600 ml-4 shrink-0"
+                  >
+                    � Explore Loans
+                  </Button>
+                </div>
+                <div className="mt-3 text-xs text-gray-400">
+                  <span className="bg-green-100 text-green-700 px-2 py-1 rounded-full">
+                    ✨ Trusted by millions across Southeast Asia
+                  </span>
+                </div>
               </div>
 
               <Button
