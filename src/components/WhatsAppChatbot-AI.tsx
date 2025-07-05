@@ -81,25 +81,6 @@ export default function WhatsAppChatbot() {
       if (data.success && data.response) {
         const aiResponse: AIResponse = data.response
         
-        // Save bot response to database
-        await fetch('/api/whatsapp-messages', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            from_number: 'whatsgrapp_bot',
-            to_number: 'web_chat_user',
-            message_body: aiResponse.text,
-            message_type: 'outgoing',
-            ai_response: aiResponse.text,
-            intent: aiResponse.intent,
-            metadata: JSON.stringify({
-              suggestions: aiResponse.suggestions,
-              productRecommendations: aiResponse.productRecommendations,
-              nextAction: aiResponse.nextAction
-            })
-          })
-        })
-        
         // Handle special actions
         if (aiResponse.nextAction) {
           switch (aiResponse.nextAction.type) {
@@ -126,31 +107,7 @@ export default function WhatsAppChatbot() {
       }
     } catch {
       // Fallback to basic responses if AI fails
-      const fallbackResponse = await getFallbackResponse(message)
-      
-      // Save fallback bot response to database
-      try {
-        await fetch('/api/whatsapp-messages', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            from_number: 'whatsgrapp_bot',
-            to_number: 'web_chat_user',
-            message_body: fallbackResponse.text,
-            message_type: 'outgoing',
-            intent: 'fallback',
-            metadata: JSON.stringify({
-              suggestions: fallbackResponse.suggestions,
-              fallback: true,
-              timestamp: new Date().toISOString()
-            })
-          })
-        })
-      } catch (error) {
-        console.error('Error saving fallback response:', error)
-      }
-      
-      return fallbackResponse
+      return getFallbackResponse(message)
     }
   }
 
